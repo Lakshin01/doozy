@@ -9,8 +9,8 @@
   "scripts": {
     "start": "node index.js",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run start\" \"npm run client\" \"npm run webhook\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build",
+    "dev": "concurrently \"npm run start\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
     "test": "jest"
   },
   "dependencies": {
