@@ -3,10 +3,16 @@
         "start": "node server/index.js --prefix server",
         "client": "npm run start --prefix client",
         "dev": "concurrently \"npm run start\" \"npm run client\"",
-        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build",
+        "heroku-postbuild": "npm run dev",
         "test": "jest"
     },
     "dependencies": {
         "concurrently": "^6.0.0"
+    },
+    "engines": {
+        "node": "15.x",
+        "npm": "7.7.5"
     }
+    
+    
 }
