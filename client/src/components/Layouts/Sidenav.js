@@ -1,11 +1,14 @@
-import React, { Component } from 'react'
-import App from '../../App';
+import App from "../../App";
 
 const Sidenav = () => {
+    const viewHeight = window.outerHeight;
     return (
-        <div className="sidenav">
-           <p> basic layout </p>
+    
+        <div style={{ height: viewHeight }} className="sidenav">
+            <p>basic layout</p>
         </div> 
+
+    
     );
   };
 

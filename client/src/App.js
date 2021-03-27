@@ -1,17 +1,14 @@
 import './App.css';
 import Header from './components/Layouts/Header';
 import Footer from './components/Layouts/Footer';
+import Sidenav from './components/Layouts/Sidenav';
 function App() {
-  return (
-    <div className="App">
-      <Header/>
-      <div className="">
-         Hi.
-      </div>
-
-      <Footer/>
-    </div>
-  );
-}
-
+    return (
+      <>
+        <Header/>
+        <Sidenav/>
+        <Footer/>
+      </>
+    );
+};
 export default App;

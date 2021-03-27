@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import "./Header.css"
-export default class Header extends Component {
-  render() {
-    return (
-      <header>
-        Header
-      </header>
-    )
-  }
+function Header() {
+  return (
+      <header> Home | Contact </header>
+  );
 }
+
+export default Header; 
