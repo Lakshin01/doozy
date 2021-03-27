@@ -1,16 +1,19 @@
 {
-  "name": "reddit-clone-api",
-  "version": "0.1.0",
+  "name": "doozy-app",
+  "version": "1.1.0",
   "private": true,
+  "author": "Lakshin Kumar",
+  "license": "MIT",
   "main": "index.js",
   "jest": {
     "setupTestFrameworkScriptFile": "./test/setup.js"
   },
   "scripts": {
     "start": "node index.js",
+    "server": "nodemon index.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run start\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "test": "jest"
   },
   "dependencies": {
