@@ -1,11 +1,43 @@
 {
-    "scripts": {
-        "start": "node server/index.js --prefix server",
-        "client": "npm run start --prefix client",
-        "dev": "concurrently \"npm run start\" \"npm run client\"",
-        "test": "jest"
-    },
-    "dependencies": {
-        "concurrently": "^6.0.0"
-    }
+  "name": "reddit-clone-api",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "jest": {
+    "setupTestFrameworkScriptFile": "./test/setup.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run start\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
+    "test": "jest"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-validator": "^5.3.0",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.3.12",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.0",
+    "faker": "^4.1.0",
+    "jest": "^23.6.0",
+    "nodemon": "^1.19.4",
+    "prettier": "^1.15.2",
+    "supertest": "^3.3.0"
+  },
+  "engines": {
+    "node": "15.x",
+    "npm": "7.7.5"
+  },
+  "prettier": {
+    "singleQuote": true
+  }
 }
