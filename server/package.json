@@ -31,6 +31,11 @@
     "prettier": "^1.15.2",
     "supertest": "^3.3.0"
   },
+  "engines": {
+    "node": "15.x",
+    "npm": "7.7.5"
+},
+
   "prettier": {
     "singleQuote": true
   }
